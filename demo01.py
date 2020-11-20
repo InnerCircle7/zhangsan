@@ -117,6 +117,7 @@ python语法 规律
 1、字典中的值没有顺序
 2、字典的结构必须是 键值对 的结构：key:value
 """
+"""
 a = {"name":"张三",0:"哈哈","age":25} # 可以理解为自定义了下标
 # 取值
 print(a["name"])
@@ -135,11 +136,44 @@ print(b)
 # print(b)
 # print(a)
 
-# 更新
+# 更新 没有返回值 存在修改 不存在新增
 a.update(name = 1111)
+a.update(a = 2222)
 print(a)
 
 print("-----------------")
 print(a.get("name111"))
 # 打印不存在的key时 会报错 上面的get不会
 # print(a["name111"])
+
+# 列表和字典的删除
+del a["name"]
+print(a)
+
+# del a[0] 数组
+"""
+
+"""
+练习：
+获取用户输入的个人信息，并且存储到字典中。
+个人信息包括了：name，age，sex。
+"""
+
+a = input("请输入你的姓名：")
+b = input("请输入你的年龄：")
+c = input("请输入你的性别：")
+
+# xx = {"name":a,"age":b,"sex":c}
+# print(xx)
+
+# 第二种方法
+userinfo = {}
+# userinfo.update(name=a,age=b,sex=c)
+# print(userinfo)
+
+# 第三种方法
+userinfo["name"] = a
+userinfo["age"] = b
+userinfo["sex"] = c
+print(userinfo)
+

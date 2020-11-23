@@ -65,16 +65,50 @@
 这10个人分别是：张三、李四、王麻子、浪晋、流云、希希、小梁、二狗、陈平安、朱珠
 并且名字和成绩需要对应上 而已大于60和小于60的要分开存放
 """
-high = {}
-low = {}
-studentlist = ["张三","李四","王麻子","浪晋","流云","希希","小梁","二狗","陈平安","朱珠"]
-a = 0
-while a < len(studentlist):
-    chengji = int(input("请输入"+studentlist[a]+"的成绩："))
-    if chengji >= 60:
-        high[studentlist[a]] = chengji
+"""
+# while 方法
+high = {}  # 定义了一个空字典 用来存储大于60的成绩
+low = {}  # 定义了一个空字典 用来存储小于60的成绩
+studentlist = ["张三","李四","王麻子","浪晋","流云","希希","小梁","二狗","陈平安","朱珠"]  # 定义了一个列表 用来存储姓名
+a = 0  # 定义了一个变量 用来控制数组的下标变化
+while a < len(studentlist):  # 因为所有的录入都是要用input，所以写了循环，len判断了数组的长度
+    chengji = int(input("请输入"+studentlist[a]+"的成绩："))  # 录入信息 为了方便判断 所以转换成整数
+    if chengji >= 60:  # 判断分数
+        high[studentlist[a]] = chengji  # 存到字典中
     else:
         low[studentlist[a]] = chengji
-    a = a + 1
+    a = a + 1  # 控制下标变化 每一次循环 都+1
 print("大于60的：",high)
 print("小于60的：",low)
+"""
+# for方法
+# high = {}  # 定义了一个空字典 用来存储大于60的成绩
+# low = {}  # 定义了一个空字典 用来存储小于60的成绩
+# studentlist = ["张三","李四","王麻子","浪晋","流云","希希","小梁","二狗","陈平安","朱珠"]  # 定义了一个列表 用来存储姓名
+# for i in studentlist:
+#     chengji = int(input("请输入"+i+"的成绩："))  # 录入信息 为了方便判断 所以转换成整数
+#     if chengji >= 60:  # 判断分数
+#         high[i] = chengji  # 存到字典中
+#     else:
+#         low[i] = chengji
+# print("大于60的：",high)
+# print("小于60的：",low)
+
+# 遍历
+# a = ["张三","李四","王麻子","浪晋","流云","希希","小梁","二狗","陈平安","朱珠"]
+# for i in a:
+#     print(i)
+# 数列生成器 range() 
+# b = list(range(0,100,2))  # 自动生成了一个数列,步进/步长
+# print(b)
+
+# for i in range(100):
+#     print(i)
+
+"""
+练习：打印九九乘法表
+"""
+for i in range(1,10):
+    for j in range(1,i+1):
+        print(i,"X",j,"=",i*j,end=" ")
+    print()

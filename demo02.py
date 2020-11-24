@@ -120,3 +120,23 @@ for i in range(1,10):
 要求账号长度是5-8位，密码6-12位，并且账号必须小写字母开头。
 储存到字典中，{username：password}
 """
+# 练习1
+# light = {"红灯":30,"绿灯":35,"黄灯":3}
+# while True:
+#     for i in light:
+#         for j in range(light[i]):
+#             print(i,"倒计时还有：",light[i]-j,"秒")
+
+#练习2
+# username = input("请输入账号：")
+# password = input("请输入密码：")
+# if len(username) >= 5 and len(username) <= 8:
+#     if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
+#         if len(password) >= 6 and len(password) <= 12:
+#             print("注册成功！",{username:password})
+#         else:
+#             print("密码长度必须是6-12位")
+#     else:
+#         print("账号必须小写字母开头")
+# else:
+#     print("账号长度必须是5-8位")

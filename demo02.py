@@ -108,10 +108,10 @@ print("小于60的：",low)
 """
 练习：打印九九乘法表
 """
-for i in range(1,10):
-    for j in range(1,i+1):
-        print(i,"X",j,"=",i*j,end=" ")
-    print()
+# for i in range(1,10):
+#     for j in range(1,i+1):
+#         print(i,"X",j,"=",i*j,end=" ")
+#     print()
 """
 练习1：
 通过print打印，模拟一个红绿灯的功能，注意：红灯30次，绿灯35次，黄灯3次。
@@ -127,7 +127,7 @@ for i in range(1,10):
 #         for j in range(light[i]):
 #             print(i,"倒计时还有：",light[i]-j,"秒")
 
-#练习2
+# 练习2
 # username = input("请输入账号：")
 # password = input("请输入密码：")
 # if len(username) >= 5 and len(username) <= 8:
@@ -140,3 +140,45 @@ for i in range(1,10):
 #         print("账号必须小写字母开头")
 # else:
 #     print("账号长度必须是5-8位")
+
+# continue 中止循环 退出本次 
+# for i in range(10):
+#     if i == 4:
+#         continue
+#     print(i)
+
+# break 跳出循环 退出本次及后面的 存在两层循环时只跳出当前层的循环
+# for i in range(10):
+#     if i == 4:
+#         break
+#     print(i)
+
+# for i in range(1,10):
+#     for j in range(1,i+1):
+#         if i == 4:
+#             break
+#         print(i,"X",j,"=",i*j,end=" ")
+#     print()
+
+# 函数/方法
+"""
+自动的判断账号长度是5-8位，并且账号必须是小写开头
+"""
+def checkname(username):
+    """
+    自动的判断账号长度是5-8位，并且账号必须是小写开头
+    """
+    if len(username) >= 5 and len(username) <= 8:
+        if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
+            print("注册成功！")
+        else:
+            print("账号必须小写字母开头")
+    else:
+        print("账号长度必须是5-8位")
+
+# def 方法的声明
+# checkname 方法的名字
+# username 方法的参数 可以不写 根据需求
+# """方法的说明"""
+# 方法的逻辑代码
+checkname("a1234")  # 使用方法

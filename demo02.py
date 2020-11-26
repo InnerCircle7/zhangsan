@@ -164,21 +164,100 @@ print("小于60的：",low)
 """
 自动的判断账号长度是5-8位，并且账号必须是小写开头
 """
-def checkname(username):
-    """
-    自动的判断账号长度是5-8位，并且账号必须是小写开头
-    """
-    if len(username) >= 5 and len(username) <= 8:
-        if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
-            print("注册成功！")
-        else:
-            print("账号必须小写字母开头")
-    else:
-        print("账号长度必须是5-8位")
 
-# def 方法的声明
-# checkname 方法的名字
-# username 方法的参数 可以不写 根据需求
-# """方法的说明"""
-# 方法的逻辑代码
-checkname("a1234")  # 使用方法
+
+
+# def checkname(username):
+#     """
+#     自动的判断账号长度是5-8位，并且账号必须是小写开头
+#     """
+#     if len(username) >= 5 and len(username) <= 8:
+#         if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
+#             print("注册成功！")
+#         else:
+#             print("账号必须小写字母开头")
+#     else:
+#         print("账号长度必须是5-8位")
+
+# # def 方法的声明
+# # checkname 方法的名字
+# # username 方法的参数 可以不写 根据需求
+# # """方法的说明"""
+# # 方法的逻辑代码
+
+# checkname("a1234")  # 使用方法
+
+# def jiafa(a,b):
+#     """
+#     这个方法的作用是实现两个数字相加
+#     """
+#     if type(a) is int and type(b) is int:
+#         print(a + b)
+#     else:
+#         print("输入的数据类型不正确")
+
+# print(jiafa(5,6))  # None
+
+# a = []
+# print(a.append("哈哈"))  # None append无返回值
+# print(a.count("哈哈"))  # 1 
+
+
+# def jiafa(a,b):
+#     """
+#     这个方法的作用是实现两个数字相加
+#     """
+#     if type(a) is int and type(b) is int:
+#         return a + b
+#     else:
+#         return "输入的数据类型不正确"
+
+# print(jiafa(5,6))
+
+# a = [8,1,2,3,4,5,6,7]
+# x = a.index(8)
+# print(a[x])
+
+# def jiafa1(a,b):
+#     """
+#     这个方法的作用是实现两个数字相加
+#     """
+#     if type(a) is int and type(b) is int:
+#         return a + b
+#     else:
+#         return "输入的数据类型不正确"
+
+# a = jiafa1(3,999)
+# print(a+2)
+
+"""
+return返回值，返回后我们可以对这个值做其他操作，而print不能
+"""
+
+# def checkname(username):
+#     """
+#     自动的判断账号长度是5-8位，并且账号必须是小写开头
+#     """
+#     if len(username) >= 5 and len(username) <= 8:
+#         if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
+#             return True
+#         else:
+#             return "账号必须小写字母开头"
+#     else:
+#         return "账号长度必须是5-8位"
+
+# username = input("请输入账号：")
+# password = input("请输入密码：")
+# if checkname(username) == True:
+#     if len(password) >= 6 and len(password) <= 12:
+#         print("注册成功！",{username:password})
+#     else:
+#         print("密码长度必须是6-12位")
+# else:
+#     print(checkname(username))  # return 有返回才能对比
+
+
+try:
+    print("a"+1)
+except:
+    print("上面的代码写错了")

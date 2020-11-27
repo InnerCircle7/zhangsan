@@ -258,6 +258,9 @@ return返回值，返回后我们可以对这个值做其他操作，而print不
 
 
 try:
-    print("a"+1)
-except:
-    print("上面的代码写错了")
+    print(jjj+1)
+except Exception as e:
+    print("上面的代码写错了",e)
+
+# 异常类 包->模块->类->方法->变量     既包含又并列
+

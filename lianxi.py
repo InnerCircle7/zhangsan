@@ -89,15 +89,38 @@ print("小于60的：",low)
 #             print(i,"倒计时还有：",light[i]-j,"秒")
 
 #练习2
-username = input("请输入账号：")
-password = input("请输入密码：")
-if len(username) >= 5 and len(username) <= 8:
-    if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
-        if len(password) >= 6 and len(password) <= 12:
-            print("注册成功！",{username:password})
+# username = input("请输入账号：")
+# password = input("请输入密码：")
+# if len(username) >= 5 and len(username) <= 8:
+#     if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
+#         if len(password) >= 6 and len(password) <= 12:
+#             print("注册成功！",{username:password})
+#         else:
+#             print("密码长度必须是6-12位")
+#     else:
+#         print("账号必须小写字母开头")
+# else:
+#     print("账号长度必须是5-8位")
+
+
+"""
+练习：
+定义一个方法，用来判断用户输入的账号密码是否符合规范。
+"""
+def check(username,password):
+    """
+    自动的判断账号长度是5-8位，密码长度6-12位，并且账号必须是小写开头
+    """
+    if len(username) >= 5 and len(username) <= 8:
+        if username[0] in "qazwsxedcrfvtgbyhnujmikolp":
+            if len(password) >= 6 and len(password) <= 12:
+                return True
+            else:
+                return "密码长度必须是6-12位"
         else:
-            print("密码长度必须是6-12位")
+            return "账号必须小写字母开头"
     else:
-        print("账号必须小写字母开头")
-else:
-    print("账号长度必须是5-8位")
+        return "账号长度必须是5-8位"
+
+print(check("a1234","1223111"))
+

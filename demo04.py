@@ -6,20 +6,24 @@ class 声明类的名字
 """
 
 class Girlfriend():
-    def __init__(self):
+    """
+    女朋友
+    """
+    def __init__(self,sex,high,weigh,hair,age):
         """
         女朋友 属性
         """
-        self.sex = "女"
-        self.high = "162cm"
-        self.weigh = "52kg"
-        self.hair = "大波浪"
-        self.age = "18岁"
+        self.sex = sex
+        self.high = high
+        self.weigh = weigh
+        self.hair = hair
+        self.age = age
     
     def caiyi(self,num):
         """
         才艺表演
         """
+        print("你性别为"+self.sex+"身高"+self.high+"体重"+self.weigh+"发型"+self.hair+"年龄"+self.age+"的女朋友开始了自己的才艺表演之:")
         if num == 1:
             print("胸口碎大石！")
         elif num == 2:
@@ -31,10 +35,19 @@ class Girlfriend():
         """
         厨艺持家
         """
+        print("你性别为"+self.sex+"身高"+self.high+"体重"+self.weigh+"发型"+self.hair+"年龄"+self.age+"的女朋友开始了自己的厨艺表演之:")
         print("精通八大菜系！啥都会！")
 
     def work(self):
         """
         工作挣钱
         """
+        print("你性别为"+self.sex+"身高"+self.high+"体重"+self.weigh+"发型"+self.hair+"年龄"+self.age+"的女朋友开始了自己的工作之:")
         print("开挖掘机！")
+
+# 类的实例化
+zhangsan = Girlfriend("男","188cm","70kg","锡纸烫","24")
+zhangsan.caiyi(1)
+zhangsan.chuyi()
+zhangsan.work()
+print(zhangsan.sex)
